@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.slider-wrap{
+    width: 700px;
+    height: 400px;
+    margin: 40px auto;
+    border: 10px solid #ddd;
+    border-radius: 10px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+li{
+    list-style-type: none;
+    display: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .3s;
+    animation: image 1s;
+}
+@keyframes image{
+    0%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+.active{
+    display: block;
+    animation: active 1s;
+}
+@keyframes active{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fa-chevron-left{
+    padding: 15px;
+    text-align: center;
+    line-height: 40px;
+    background: green;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.fa-chevron-left:hover{
+    background: white;
+    color: green;
+}
+.fa-chevron-right{
+    text-align: center;
+    padding: 15px;
+    background: green;
+    color: white;
+    position: absolute;
+    top: 40%;
+    right: 2%;
+    transition: all .3s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.fa-chevron-right:hover{
+    background: white;
+    color: green;
+}
